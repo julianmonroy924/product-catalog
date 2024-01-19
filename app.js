@@ -33,9 +33,9 @@ let quantityAvailable = prompt("Enter in Kilograms the Quantity Available  for "
 //5. I am creating an occurence //dont really understand this part//
 let inventoryItem = new InventoryItem(productName, modelName, costAmount, quantityAvailable);
 
-//6. I am adding set of data objects to the inventory array
+//6. I am adding set of data objects to the inventory
 inventory.push(inventoryItem);
-
 }
 
-alert(`Inventory: ${inventory}`);
+//7. I am loging the result
+console.log("Inventory:", inventory);
