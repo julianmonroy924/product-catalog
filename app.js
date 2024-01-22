@@ -51,19 +51,19 @@ for (let counter = 0; counter < inventory.length; counter++ ) {
 //7. I am loging the result
 // console.log(inventory [1][1]);
 
-// //const bodyElement = document.dody;
+// const bodyElement = document.dody;
 // const arrayContainer = document.createElement("div");
-// //newText.classList.add("h-screen", "flex", "justify-center", "items-center");
+// newText.classList.add("h-screen", "flex", "justify-center", "items-center");
 // inventory.forEach(item => {
-//     const spanElement = document.createElement("span");
+//      const spanElement = document.createElement("span");
 
-//     spanElement.className = "inline-block bg-blue-500 text-white px-2 py-1 rounded mr-2";
+//      spanElement.className = "inline-block bg-blue-500 text-white px-2 py-1 rounded mr-2";
 
-//     spanElement.textContent = item;
+//      spanElement.textContent = item;
 
-//     // Append the span element to the container
-//     arrayContainer.appendChild(spanElement);
-// });
+//      // Append the span element to the container
+//      arrayContainer.appendChild(spanElement);
+//  });
 
 
 
