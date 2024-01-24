@@ -1,14 +1,22 @@
 //1. I am creaing an empty array to store the items.
 let inventory = [];
 
-//2. I am using a loop to promp users to inpute their data and give the option to exit input. 
-while (true) {
+//2. I am using a loop to promp users to inpute their data for 5 items. 
+for (count = 0; count < 5; count++) {
+    
+    //3. I am gathering the data points for the coresponding products.
+    let productName = prompt(`Please enter the name for product ${count + 1} of 5'. `);
 
-    let productName = prompt('Please enter the new product`s name. (or type `exit` to stop entering products)');
+    let modelName = prompt("Enter the Model Number for " + productName + ":");
+    let costAmount = prompt("Enter the Cost in dollars and cents (ex00.00) for " + productName + ": $");
+    let quantityAvailable = prompt("Enter in Kilograms the Quantity Available  for " + productName + ":");
+    
+    //4. I am adding the set of data objects to the inventory
 
-    if (productName.toLowerCase() === 'exit') {
-        break;
-    };
+    inventory.push([productName, modelName, costAmount, quantityAvailable]);
+ 
+
+    }
     //------------------This for loop can be used to replace the while loop. It does not have the exit "break"; rather the user is asked the prompts 
     //                  how ever many times the counter is allowed to run.(in this example is 2)
     // for(let counter = 2; counter > 0; counter--){
@@ -25,17 +33,14 @@ while (true) {
     //    }
     //-------------------
 
-//3. I am gathering the next data points for the coresponding product. 
-    let modelName = prompt("Enter the Model Number for " + productName + ":");
-    let costAmount = prompt("Enter the Cost in dollars and cents (ex00.00) for " + productName + ": $");
-    let quantityAvailable = prompt("Enter in Kilograms the Quantity Available  for " + productName + ":");
+ 
+    
 
 
 
 //4. I am adding the set of data objects to the inventory
 
-    inventory.push([productName, modelName, costAmount, quantityAvailable]);
-}
+
 
 
 //5. I am displaying the array in the console utilizing a counter to go through the array. 
@@ -95,12 +100,12 @@ divElement.innerHTML = `
 
 <div class="bg-teal-300 p-8 w-2/3 rounded-lg">
     <p class="text-gray-600 text-xs uppercase"> Catalog MVP by @JulianMonroy </p>
-    <p class="text-4xl"> Catalog: <span class="font-bold text-red"> ${result2} <br> 
+    <p class="text-7xl"> Catalog: <span class="font-bold text-red"> ${result2} <br> 
     </span> </p>
 </div>
 `;
 document.body.appendChild(divElement);
-bodyElement.appendChild(divElement);
+
 
 
 // const bodyElement = document.dody;
