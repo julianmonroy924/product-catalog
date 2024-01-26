@@ -52,9 +52,9 @@ for (let counter = 0; counter < inventory.length; counter++) {
 let result2 = 0;
 let result = 0;
 for (let counter = 0; counter < inventory.length; counter++ ) {
-    result += `\nThe catalog contains product # ${counter + 1} \nProductName: ${inventory[counter][0]} Model #: ${inventory[counter][1]} Cost: ${inventory[counter][2]} Quantity Added: ${inventory[counter][3]}\n `;
+    result += `\nThe catalog contains product # ${counter + 1} \nProduct Name: ${inventory[counter][0]} Model #: ${inventory[counter][1]} Cost: ${inventory[counter][2]} Quantity Added: ${inventory[counter][3]}\n `;
 
-    result2 += `<br>The catalog contains product # ${counter + 1} <br>ProductName: ${inventory[counter][0]} Model #: ${inventory[counter][1]} Cost: ${inventory[counter][2]} Quantity Added: ${inventory[counter][3]}\n `;
+    result2 += `<br>The catalog contains product # ${counter + 1} <br>Product Name: ${inventory[counter][0]} Model #: ${inventory[counter][1]} Cost: ${inventory[counter][2]} Quantity Added: ${inventory[counter][3]}\n `;
     //alert(`The catalog contains product # ${counter + 1} `);
     //alert(`ProductName: ${inventory[counter][0]} Model #: ${inventory[counter][1]} Cost: ${inventory[counter][2]} Quantity Added: ${inventory[counter][3]}`);
     // alert('Model #:', inventory[counter][1]);
