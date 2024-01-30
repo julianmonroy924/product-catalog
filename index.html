@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Catalog MVP</title>
+    <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Product Catalog Minimum Viable Product (MVP)</h1>
+
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <h1>Product Catalog Minimum Viable Product (MVP) Version 2.0</h1>
+    <div class="bg-white p-8 rounded shadow-md w-96">
+
+        <h1 class="text-2xl font-semibold mb-4">Product Information</h1>
+
+        <form id="productForm" class="space-y-4">
+
+            <div class="justify-items-end">
+                <input type="reset" value="Reset">
+            </div>
+
+            <!-- Product Name Input -->
+            <div>
+                <label for="productName" class="block text-sm font-medium text-gray-600">Product Name</label>
+                <input type="text" id="productName" name="productName" class="mt-1 p-2 w-full border rounded">
+            </div>
+
+            <!-- Model Number Input -->
+            <div>
+                <label for="productModelHTML" class="block text-sm font-medium text-gray-600">Model Number</label>
+                <input type="text" id="productModelHTML" name="modelNumber" class="mt-1 p-2 w-full border rounded">
+            </div>
+
+            <!-- Cost Input -->
+            <div>
+                <label for="productCostHTML" class="block text-sm font-medium text-gray-600">Cost</label>
+                <input type="text" id="productCostHTML" name="cost" class="mt-1 p-2 w-full border rounded">
+            </div>
+
+            <!-- Quantity Input -->
+            <div>
+                <label for="productQuantityHTML" class="block text-sm font-medium text-gray-600">Quantity</label>
+                <input type="text" id="productQuantityHTML" name="quantity" class="mt-1 p-2 w-full border rounded">
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Add New Product" class="w-full bg-blue-500 text-white p-2 rounded">
+            </div>
+
+            <div>
+                <button type="button" onclick="eventFunction2()" value="View Full Catalog"
+                    class="w-full bg-blue-500 text-white p-2 rounded">View Full Catalog</button>
+            </div>
+
+        </form>
+        <div>
+            <h3></h3>
+        </div>
+        <div id="productResultHTML"></div>
+    </div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>
