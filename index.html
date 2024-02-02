@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Catalog MVP</title>
-    <link href="./output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
 </head>
 
 
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-    <h1>Product Catalog Minimum Viable Product (MVP) Version 2.0</h1>
-    <div class="bg-white p-8 rounded shadow-md w-96">
-
-        <h1 class="text-2xl font-semibold mb-4">Product Information</h1>
-
+<body class="grid">
+    
+    <div class=" flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="  bg-white p-8 rounded shadow-md w-96">
+        <h1 class="text-2xl font-semibold  mb-4">Product Information</h1>
+        
         <form id="productForm" class="space-y-4">
 
             <div class="justify-items-end">
@@ -23,7 +23,7 @@
 
             <!-- Product Name Input -->
             <div>
-                <label for="productName" class="block text-sm font-medium text-gray-600">Product Name</label>
+                <label for="productName" class="border text-sm font-medium text-gray-600">Product Name</label>
                 <input type="text" id="productName" name="productName" class="mt-1 p-2 w-full border rounded">
             </div>
 
@@ -51,18 +51,22 @@
             </div>
 
             <div>
-                <button type="button" onclick="eventFunction2()" value="View Full Catalog"
+                <button type="button" onclick="eventFunction2()" value="View Full Catalog" id="click-me"
                     class="w-full bg-blue-500 text-white p-2 rounded">View Full Catalog</button>
             </div>
 
         </form>
-        <div>
-            <h3></h3>
-        </div>
-        <div id="productResultHTML"></div>
+       
     </div>
+    
+    <div class="m-4 max-h-96 font-semibold overflow-auto" id="new-item-list"></div>
+    </div>
+    
 
+    <div id="product-result"></div>
 
+    <h1 class="text-black text-xs uppercase">Product Catalog Minimum Viable Product (MVP) Version 2.3 <em> Cataog MVP by @JulianMonroy</em> </h1>
+    
     <script src="app.js"></script>
 </body>
 

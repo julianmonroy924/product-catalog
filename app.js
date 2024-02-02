@@ -1,11 +1,12 @@
 //1. I am creaing an empty array to store the items.
 const productFormJAVA = document.querySelector('#productForm');
+const clickBtnEl = document.querySelector('#click-me');
 //2. I am using a loop to promp users to inpute their data for 5 items. 
 //for (count = 0; count < 5; count++) {
     let inventory = [];
     let result2 = 0;
 
-const eventFunction = function (event) {
+const inventoryFunction = function (event) {
     event.preventDefault();
   
     const nameElement = document.querySelector('#productName');
@@ -23,32 +24,78 @@ const eventFunction = function (event) {
   
     inventory.push(newProduct);
       //console.log(amazonCatalog);
-    console.log(`\n*New Product Added*  Product Name: ${nameElement.value} Model: ${modelElement.value} Currency: ${currencyElement.value} Quantity: ${quantityElement.value}\n `);
-  }
-  
-  productFormJAVA.addEventListener('submit', eventFunction); 
 
-  const eventFunction2 = function (event) {
-    // event.preventDefault();
+      const newItemList = document.querySelector('#new-item-list');
+
+      div = document.createElement('div');
+      div.classList.add('mt-2', 'h-2', 'justify-center', 'items-center', "max-h-96");
+      div.innerHTML = `
+
+    <div class="bg-teal-300 p-8 w-2/3 rounded-lg max-h-96">
+    
+    <p class="text-xl"> *New Product Added* <br> <span class="font-bold text-red"> 
+    Product Name:\t ${nameElement.value}  
+    Product Model:\t ${modelElement.value}
+    Product Cost:\t ${costElement.value}
+    Product Quantity:\t ${quantityElement.value}
+    </span> 
+    </p><br>
+
+
+    </div>
+`
+
+newItemList.appendChild(div);
+
+
+    }
+  
+  productFormJAVA.addEventListener('submit', inventoryFunction); 
+
 
 //console.log(` \tProduct Name\tPrice\t\tCurrency\tQuantity\tPrime`);
+
+const browserDisplayFunction = function () {
+    // event.preventDefault();
+
 SecondCounter = 1;
 ThirdCounter = 0;
 
+console.log('Test for functionality of eventFunction2');
+
 for(let counter of inventory){
 
-const browserResultJAVA = document.querySelector('#productResultHTML');
+const browserResult = document.querySelector('#product-result');
 //let bodyElement = document.dody;
-let divElement = document.createElement("div");
-divElement.classList.add("mt-2", "h-2", "justify-center", "items-center");
+div = document.createElement("div");
+div.classList.add("mt-2", "h-2", "justify-center", "items-center");
 //divElement.textContent = ` \tProduct Name\tPrice\t\tCurrency\tQuantity\tPrime`;  
-divElement.textContent =  `\n ${ThirdCounter += 1}. ${counter['productNameJS']}\n ${counter['productModelJS']}\n ${counter['productCostJS']}\n${counter['productQuantityJS']}\n\n\n`;
+//divElement.textContent =  (`\n ${ThirdCounter += 1}. ${counter['productNameJS']}\n ${counter['productModelJS']}\n ${counter['productCostJS']}\n${counter['productQuantityJS']}\n\n\n`) ;
 //divElement.textContent = `Your content here ${amazonCatalog}`;
+div.innerHTML = `
 
-browserResultJAVA.appendChild(divElement)
+<div class="bg-teal-300 p-8 w-2/3 rounded-lg">
+    
+    <p class="text-xl"> Product #${SecondCounter++}: <br> <span class="font-bold text-red"> 
+    Product Name:\t ${counter['productNameJS']} <br> 
+    Product Model:\t ${counter['productModelJS']}<br>
+    Product Cost:\t ${counter['productCostJS']}<br>
+    Product Quantity:\t ${counter['productQuantityJS']}
+    </span> </p>
+
+    
+</div>
+`
+
+
+
+
+browserResult.appendChild(div);
     
   }
 }
+  
+  clickBtnEl.addEventListener('click', () => browserDisplayFunction());
 
     //3. I am gathering the data points for the coresponding products.
     //let productName = prompt(`Please enter the name for product ${count + 1} of 5'. `);
