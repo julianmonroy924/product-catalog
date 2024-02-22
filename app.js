@@ -1,5 +1,37 @@
+class catalog {
+  constructor(formName){
+    this.formName = formName;
+   }
+    
+  addProduct(product = {}) {
+      let inventory = [];
+      
+      inventory.push(product);
+  
+      console.log(product);
+      console.log(`**Added New Product ${product['productName']}`);
+    }
+      
+   } 
+  
+  document.querySelector('form').addEventListener('submit', evt => {
+    evt.preventDefault();
+  
+  const newProduct = {
+    productName: document.querySelector('#product-name').value,
+    modelElement: document.querySelector('#product-model').value,
+    costElement: document.querySelector('#product-cost').value,
+    quantityElement: document.querySelector('#product-quantity').value,
+  
+  };
+  
+    const productFromObj = new catalog('product-form');
+  
+    productFromObj.addProduct(newProduct);
+  }); 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //1. I am creaing an empty array to store the items.
-const productFormJAVA = document.querySelector('#productForm');
+const productFormJAVA = document.querySelector('#product-Form');
 const clickBtnEl = document.querySelector('#click-me');
 //2. I am using a loop to promp users to inpute their data for 5 items. 
 //for (count = 0; count < 5; count++) {
@@ -9,17 +41,17 @@ const clickBtnEl = document.querySelector('#click-me');
 const inventoryFunction = function (event) {
     event.preventDefault();
   
-    const nameElement = document.querySelector('#productName');
-    const modelElement = document.querySelector('#productModelHTML');
-    const costElement = document.querySelector('#productCostHTML');
-    const quantityElement = document.querySelector('#productQuantityHTML');
+    const nameElement = document.querySelector('#product-Name');
+    const modelElement = document.querySelector('#product-Model');
+    const costElement = document.querySelector('#product-Cost');
+    const quantityElement = document.querySelector('#product-Quantity');
     
     
     const newProduct = {
-      productNameJS: nameElement.value,
-      productModelJS: modelElement.value,
-      productCostJS: costElement.value,
-      productQuantityJS: quantityElement.value,
+      productName: nameElement.value,
+      productModel: modelElement.value,
+      productCost: costElement.value,
+      productQuantity: quantityElement.value,
       };
   
     inventory.push(newProduct);
@@ -86,9 +118,6 @@ div.innerHTML = `
     
 </div>
 `
-
-
-
 
 browserResult.appendChild(div);
     

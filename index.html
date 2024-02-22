@@ -2,72 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalog MVP</title>
-    <link href="src/output.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Catalog MVP</title>
+	<link href="src/output.css" rel="stylesheet">
 </head>
 
 
 <body class="grid">
-    
-    <div class=" flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="  bg-white p-8 rounded shadow-md w-96">
-        <h1 class="text-2xl font-semibold  mb-4">Product Information</h1>
-        
-        <form id="productForm" class="space-y-4">
 
-            <div class="justify-items-end">
-                <input type="reset" value="Reset">
+	<div class=" flex items-center justify-center min-h-screen bg-gray-100">
+		<div class="  bg-white p-8 rounded shadow-md w-96">
+			<h1 class="text-2xl font-semibold  mb-4">Product Information</h1>
+
+			<form id="product-form" class="space-y-4">
+
+				<div class="justify-items-end">
+					<input type="reset" value="Reset">
             </div>
 
-            <!-- Product Name Input -->
-            <div>
-                <label for="productName" class="border text-sm font-medium text-gray-600">Product Name</label>
-                <input type="text" id="productName" name="productName" class="mt-1 p-2 w-full border rounded">
+					<!-- Product Name Input -->
+					<div>
+						<label for="product-name" class="border text-sm font-medium text-gray-600">Product Name</label>
+						<input type="text" id="product-name" name="productName" class="mt-1 p-2 w-full border rounded">
             </div>
 
-            <!-- Model Number Input -->
-            <div>
-                <label for="productModelHTML" class="block text-sm font-medium text-gray-600">Model Number</label>
-                <input type="text" id="productModelHTML" name="modelNumber" class="mt-1 p-2 w-full border rounded">
+						<!-- Model Number Input -->
+						<div>
+							<label for="product-model" class="block text-sm font-medium text-gray-600">Model Number</label>
+							<input type="text" id="product-model" name="modelNumber" class="mt-1 p-2 w-full border rounded">
             </div>
 
-            <!-- Cost Input -->
-            <div>
-                <label for="productCostHTML" class="block text-sm font-medium text-gray-600">Cost</label>
-                <input type="text" id="productCostHTML" name="cost" class="mt-1 p-2 w-full border rounded">
+							<!-- Cost Input -->
+							<div>
+								<label for="product-cost" class="block text-sm font-medium text-gray-600">Cost</label>
+								<input type="text" id="product-cost" name="cost" class="mt-1 p-2 w-full border rounded">
             </div>
 
-            <!-- Quantity Input -->
-            <div>
-                <label for="productQuantityHTML" class="block text-sm font-medium text-gray-600">Quantity</label>
-                <input type="text" id="productQuantityHTML" name="quantity" class="mt-1 p-2 w-full border rounded">
+								<!-- Quantity Input -->
+								<div>
+									<label for="product-quantity" class="block text-sm font-medium text-gray-600">Quantity</label>
+									<input type="text" id="product-quantity" name="quantity" class="mt-1 p-2 w-full border rounded">
             </div>
 
-            <!-- Submit Button -->
-            <div>
-                <input type="submit" value="Add New Product" class="w-full bg-blue-500 text-white p-2 rounded">
+									<!-- Submit Button -->
+									<div>
+										<input type="submit" value="Add New Product" class="w-full bg-blue-500 text-white p-2 rounded">
             </div>
 
-            <div>
-                <button type="button" onclick="eventFunction2()" value="View Full Catalog" id="click-me"
+										<div>
+											<button type="button" onclick="eventFunction2()" value="View Full Catalog" id="click-me"
                     class="w-full bg-blue-500 text-white p-2 rounded">View Full Catalog</button>
-            </div>
+										</div>
 
-        </form>
-       
-    </div>
-    
-    <div class="m-4 max-h-96 font-semibold overflow-auto" id="new-item-list"></div>
-    </div>
-    
+			</form>
 
-    <div id="product-result"></div>
+		</div>
 
-    <h1 class="text-black text-xs uppercase">Product Catalog Minimum Viable Product (MVP) Version 2.3 <em> Cataog MVP by @JulianMonroy</em> </h1>
-    
-    <script src="app.js"></script>
+		<div class="m-4 max-h-96 font-semibold overflow-auto" id="new-item-list"></div>
+	</div>
+
+
+	<div id="product-result"></div>
+
+	<h1 class="text-black text-xs uppercase">Product Catalog (MVP) Version 3.0
+		<em> Cataog MVP by @julianmonroy924</em> </h1>
+
+	<script src="app.js"></script>
 </body>
 
 </html>

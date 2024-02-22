@@ -22,3 +22,18 @@ Write an HTML page with a form that has 4 inputs.
 
 I will style this page with tailwind, include relevant tailwind css with the form justified in the center. Bellow the form; a field should be created to display the list of the items inpute.
 
+V3.0
+Improve on your product catalog app to introduce classes/objects to break the code into smaller pieces. For a Product Catalog, the classes/objects involved are:
+
+Product (representing an individual product)
+properties: name, price, currency
+methods: show the name of the products, show the price
+Catalog (representing a store of several products)
+properties: productStore
+methods: add a product
+Person (a person buying a product)
+properties: firstName, lastName, email
+methods: get a person’s full name, get a person’s email
+Customers (all persons shopper)
+properties: customersStore
+methods: add a person as customer to the customerStore, show all customers
