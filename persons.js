@@ -1,33 +1,31 @@
-class person {
-    constructor(formName, eMail) {
-      this.formName = formName;
-      this.eMail = eMail;
-  
+class persons {
+    constructor(customersStore, ) {
+      this.customersStore = customersStore;
     }
   
+    addPerson(person = {}) {
+      let store = [];
   
-    addPerson(product = {}) {
-      let inventory = [];
+      store.push(person);
   
-      inventory.push(product);
-  
-      console.log(product);
-      console.log(`added new ${product['productName']}`);
+      console.log(person)
+      console.log(`**Added New Customer :\n  Full Name: ${person['fullNameEl']}\n  Email: ${person['emailElement']}`);
+    
     }
+  }
   
-  } 
   
-  document.querySelector('form').addEventListener('submit', evt => {
+  document.querySelector('#product-form-1').addEventListener('submit', evt => {
     evt.preventDefault();
   
-    const newProduct = {
-      fullNameEl: document.querySelector('#full-name').value,
-      eMailElement: document.querySelector('#full-eMail').value,
-      
+    const newPerson = {
+      fullNameEl: document.querySelector('#customer-name-full').value,
+      emailElement: document.querySelector('#customer-email').value,
+  
   
     }
-    
-    const personFromObj = new catalog('product-form');
   
-    personFromObj.addPerson(newProduct)
+    const personFromObj = new persons();
+  
+    personFromObj.addPerson(newPerson)
   });
