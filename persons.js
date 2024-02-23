@@ -1,6 +1,8 @@
 class persons {
-    constructor(customersStore, ) {
-      this.customersStore = customersStore;
+    constructor(customersStore, fullName, email) {
+        this.customersStore = customersStore;
+        this.fullName = fullName;
+        this.email = email;
     }
   
     addPerson(person = {}) {
